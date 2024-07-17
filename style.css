@@ -1,0 +1,28 @@
+.add_style{  
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap:20px;
+    transition: order 0.4s;
+    background-color: grey;
+    
+}
+img{
+    padding:10px;
+}
+.addcolor1{
+    background-color: aquamarine;
+}
+.addcolor2{
+    background-color: tomato;
+}
+
+.img1{
+   background-color: goldenrod;
+}
+.img2{
+background-color: blueviolet;
+}
+.order3{
+    order:3;
+}

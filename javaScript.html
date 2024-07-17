@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 400px);
+        grid-template-rows: repeat(2, 200px);
+        grid-template-areas:
+          "div1 div2 div2"
+          "div1 div3 div4";
+        gap: 5px;
+      }
+      .div1 {
+        grid-area: div1;
+        background: red;
+      }
+      .div2 {
+        grid-area: div2;
+        background-color: blue;
+      }
+      .div3 {
+        grid-area: div3;
+        background-color: yellow;
+      }
+      .div4 {
+        grid-area: div4;
+        background-color: green;
+      }
+      .flex {
+        display: flex;
+        gap: 5px;
+      }
+      .flex > #box {
+        width: 50%;
+      }
+
+      /* media query */
+       @media screen and (min-width: 577px) {
+        .container {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, 200px);
+           grid-template-areas:
+          "div1 div2 div2"
+          "div1 div3 div4";
+          gap: 5px;
+        }
+      }
+      @media screen and (max-width: 576px) {
+        .container {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: repeat(4, 200px);
+         
+          grid-template-areas:
+            "div1"
+            "div2"
+            "div3"
+            "div4";
+          gap: 5px;
+        }
+      }
+     
+    </style>
+  </head>
+  <body>
+    <section>
+      <!-- .container>.div$*4{num-$} -->
+      <div class="container">
+        <div class="div1" id="box">num-1</div>
+        <div class="div2" id="box">num-2</div>
+        <div class="div3" id="box">num-3</div>
+        <div class="div4" id="box">num-4</div>
+      </div>
+    </section>
+    <a href="">visit google</a>
+    <div class="text_div">
+      <h1>Hello Zihad world</h1>
+      <h1>Hello Zihad</h1>
+    </div>
+    <div class="imgae add_style">
+      <button onclick="prev()" class="order0">Previous</button>
+      <img src="img/Rectangle 6.png" alt="" width="400px" height="300px" >
+      <img src="img/Rectangle 7.png" alt="" width="400px" height="300px" >
+      <button onclick="next()" class="order3">Next</button>
+    </div>
+   <div>
+     <h1 id="heading1">you didn't click any button</h1>
+    <button class="btn">button 1</button><button class="btn">button 2</button><button class="btn">click me</button>
+   </div>
+   <div class="song_div">
+    <button class="play song">play song</button><button class="pause song">pause song</button><button class="stop song">stop song</button>
+   </div>
+    <script src="script.js"></script>
+  </body>
+</html>
