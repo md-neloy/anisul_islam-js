@@ -36,3 +36,15 @@ background-color: blueviolet;
     grid-column: span 2;
     grid-row: span 2;
 }
+.song_div{
+    padding:20px 0;
+}
+.song{
+    width: 150px;
+    height: 30px;
+    background-color: hotpink;
+    margin-left: 10px;
+}
+.box_shadow{
+    box-shadow: -4px 20px 32px 4px rgba(6, 235, 55, 0.75);
+}

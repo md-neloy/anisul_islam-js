@@ -135,21 +135,66 @@ btnTag[2].addEventListener("click", function () {
 
 // play song with js
 var len = document.querySelectorAll(".song").length;
-var audio = new Audio("song/Satyanaas.mp3");
+var audio_path = [
+  "song/Satyanaas.mp3",
+  "song/Satyanaas.mp3",
+  "song/Satyanaas.mp3",
+];
+var audio_len = audio_path.length;
+var audio_count = 0;
+var audio = new Audio(audio_path[audio_count]);
+function playNext() {
+  audio_count++;
+  if (audio_count >= audio_len) {
+    audio_count = 0;
+  }
+  audio.src = audio_path[audio_count];
+  audio.play();
+}
+
 for (var i = 0; i < len; i++){
   document.querySelectorAll(".song")[i].addEventListener("click", function () {
-    var text = this.innerHTML;
-    switch (text) {
-      case "play song":
-        audio.play();
-        break;
-      case "stop song":
-        audio.pause();
-        audio.currentTime = 0;
-        break;
-      case "pause song":
-        audio.pause();
-        break;
-    }
+    var element = this.innerHTML;
+    audiofunction(element);
+    animationFucntion(element);
   })
 }
+function audiofunction(element) {
+  switch (element) {
+    case "play":
+      audio.play();
+      break;
+    case "pause":
+      audio.pause();
+      audio.currentTime = 0;
+      break;
+    case "stop":
+      audio.pause();
+      break;
+    default:
+      console.log("this button is use for other function");
+      break;
+  }
+}
+function animationFucntion(element) {
+  document.querySelector("." + element).classList.add("box_shadow");
+  setTimeout(function () {
+    document.querySelector("." + element).classList.remove("box_shadow");
+  }, 1000);
+}
+// var songbtn0 = document.querySelectorAll(".song")[0];
+// songbtn0.addEventListener("click", function () {
+//   audio.play();
+//   songbtn0.classList.add("box_shadow");
+//   setTimeout(function () {
+//     songbtn0.classList.remove("box_shadow");   
+//   },1000)
+// })
+
+// document.querySelectorAll(".song")[1].addEventListener("click", function () {
+//   audio.pause();
+//   })
+// document.querySelectorAll(".song")[2].addEventListener("click", function () {
+//   audio.pause();
+//   audio.currentTime = 0;
+//   })
