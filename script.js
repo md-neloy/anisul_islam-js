@@ -1,26 +1,17 @@
 // var num1 = prompt("enter your first number");
 // var num2 = prompt("enter your last second");
-function square(x) {
-  var result = x + x;
-  document.write(result);
-}
-square(4);
-document.write("<br>");
-(function sum(x, y) {
-  document.write(x + y);
-})(5, 7);
 
-var country1 = ["bangladesh", "india"];
-var country2 = ["pakistan", "afganistan", 1, 2];
-var country = country1.concat(country2);
-document.write("<h1>" + country + "</h1>");
-
+/*
+// sorting the array
 var arr = [2, 54, 10, 30, 20];
 arr.sort(function (a, b) {
   return a - b;
 });
 document.write(arr);
-
+*/
+/*
+// findi high score from the array
+arr = [2, 54, 10, 30, 20];
 function highScore(arr) {
   var max = arr[0];
   for (var i = 0; i < arr.length; i++) {
@@ -32,7 +23,7 @@ function highScore(arr) {
 }
 var result = highScore(arr);
 document.write("<br> Highest number of array is: " + result);
-
+*/
 // for (var i = 0; i < 3; i++){
 //     for (var j = 0; j < 2; j++){
 //         document.write("<h1>" + playersifo[i][j] + "</h1>");

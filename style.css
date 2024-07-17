@@ -23,6 +23,16 @@ img{
 .img2{
 background-color: blueviolet;
 }
-.order3{
-    order:3;
+.grid_paraent{
+ display: grid;
+ grid-template-columns: repeat(3,200px);
+ grid-template-rows: repeat(3,100px);
+ gap:10px;
+}
+.div{
+    background-color: blue;
+}
+.division4{
+    grid-column: span 2;
+    grid-row: span 2;
 }
